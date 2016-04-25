@@ -12,6 +12,11 @@
  */
 
 @import "colors";
-
+@import "fonts";
 // Custom bootstrap variables must be set or import before bootstrap itself.
 @import "bootstrap";
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
