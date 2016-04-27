@@ -17,6 +17,19 @@
 @import "bootstrap";
 
 h1 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
+
+  color: $color-primary-0;
+}
+
+p {
+  font-family: 'Cardo', serif;
+  font-weight: normal;
+
+  color: $color-dark-grey;
+}
+
+div {
+  background-color: $color-light-grey;
 }

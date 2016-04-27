@@ -3,6 +3,7 @@
  * formal.
  */
 
+// Montserrat font
 @font-face {
   font-family: 'Montserrat';
   src: url('montserrat/Montserrat-Regular.ttf') format('truetype');
@@ -34,6 +35,42 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100; //IDK What to put...
+  font-style: normal;
+}
+
+// Cardo font
+@font-face {
+  font-family: 'Cardo';
+  src: url('cardo/Cardo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  src: url('cardo/Cardo-Black.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  src: url('cardo/Cardo-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  src: url('cardo/Cardo-Light.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo';
+  src: url('cardo/Cardo-Thin.ttf') format('truetype');
   font-weight: 100; //IDK What to put...
   font-style: normal;
 }
