@@ -2,7 +2,9 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: "js/app.js"
+      joinTo:
+        "js/app.js"
+        //"js/vendor.js" : /^node_modules/
 
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
@@ -52,12 +54,27 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/]
+    },
+
+    //NONE OF THIS WORKS FOR SOME REASON (THE IMPORT)
+    sass: {
+      //tell sass-brunch where to look for @imports
+      includePaths: ["node_modules/bootstrap/scss"],
+      //min. precision for bootstrap
+      precision: 8
+    },
+
+    copycat: {
+      //"bootstrap" : ["node_modules/bootstrap/scss"]
     }
   },
 
   modules: {
     autoRequire: {
-      "js/app.js": ["web/static/js/app"]
+      "js/app.js": [
+        "bootstrap",
+        "web/static/js/app"
+      ]
     }
   },
 
@@ -65,6 +82,10 @@ exports.config = {
     enabled: true,
     // Whitelist the npm deps to be pulled in as front-end assets.
     // All other deps in package.json will be excluded from the bundle.
-    whitelist: ["phoenix", "phoenix_html"]
+    whitelist: ["phoenix", "phoenix_html", "jquery", "bootstrap"],
+    globals: {
+      $: 'jquery',
+      jQuery: 'jquery'
+    }
   }
 };
